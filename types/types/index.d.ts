@@ -14,6 +14,9 @@ export interface BaseRelationOptions {
 }
 export interface OneToManyRelationOptions extends BaseRelationOptions {
     type: RelationType.OneToMany;
+    source?: {
+        joinKey: string;
+    };
     target: {
         resourceId: string;
         joinKey: string;

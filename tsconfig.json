@@ -19,5 +19,6 @@
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true
   },
-  "exclude": ["test", "lib", "types", "example"]
+  "include": ["types/**/*.d.ts"],
+  "exclude": ["test", "lib", "example"]
 }
