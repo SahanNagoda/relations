@@ -9,4 +9,5 @@ export * from './utils/index.js';
 export * from './translations.js';
 export * from './types/index.js';
 export * from './hooks/useRelationRecords.js';
+export * from './hooks/useColumnPreferences.js';
 export * from './constants/index.js';
