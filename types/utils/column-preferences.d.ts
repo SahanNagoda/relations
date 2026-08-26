@@ -7,9 +7,28 @@ export interface ColumnPreferences {
 }
 
 export interface ApplyColumnPreferencesOptions {
-  /** Resource id of the owning side — its back-reference column will be excluded. */
+  /** Resource id of the owning side — its AdminJS `reference` column will be excluded. */
   ownerResourceId?: string;
+  /** Target join key(s). Every row in the subtable has the same value in these columns. */
+  joinKeys?: string[];
 }
+
+export interface RelationSide {
+  joinKey?: string;
+  joinKeys?: string[];
+}
+
+export declare const joinKeysOf: (side?: RelationSide | null) => string[];
+
+export declare const isOwnerJoinColumn: (
+  prop: PropertyJSON | { name?: string; propertyPath?: string; path?: string; reference?: string } | null,
+  opts?: ApplyColumnPreferencesOptions
+) => boolean;
+
+export declare const withoutOwnerJoinColumns: <T extends { name?: string; propertyPath?: string; path?: string; reference?: string }>(
+  properties: T[] | undefined,
+  opts?: ApplyColumnPreferencesOptions
+) => T[];
 
 /**
  * Derives the ordered, filtered list of property descriptors to render in a
