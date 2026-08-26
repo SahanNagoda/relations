@@ -22,5 +22,6 @@ export declare enum Labels {
 export declare enum Actions {
     AddItem = "[@adminjs/relations]_addItem",
     RemoveRelation = "[@adminjs/relations]_removeRelation",
-    RemoveRecord = "[@adminjs/relations]_removeRecord"
+    RemoveRecord = "[@adminjs/relations]_removeRecord",
+    ViewInList = "[@adminjs/relations]_viewInList"
 }
