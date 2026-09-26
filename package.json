@@ -13,11 +13,11 @@
   "license": "SEE LICENSE IN LICENSE",
   "scripts": {
     "release": "semantic-release",
-    "build": "babel src --out-dir lib --copy-files --no-copy-ignored --extensions '.ts,.js,.jsx,.tsx'",
+    "build:lib": "babel src --out-dir lib --copy-files --no-copy-ignored --extensions '.ts,.js,.jsx,.tsx'",
     "types": "tsc",
     "test": "jest",
     "lint": "eslint './src/**/*'",
-    "check:all": "yarn lint && yarn build && yarn test"
+    "check:all": "yarn lint && yarn build:lib && yarn test"
   },
   "husky": {
     "hooks": {
